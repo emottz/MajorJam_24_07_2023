@@ -16,13 +16,17 @@ public class char_control : MonoBehaviour
     private Camera followCamera;
 
     private Animator anim;
-    
+
+    public AudioSource Walk;
 
     void Start()
     {
+        StartCoroutine(Started());
 
         controler = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();
+
+
     }
 
     private void Update()
@@ -63,6 +67,26 @@ public class char_control : MonoBehaviour
         }
 
         controler.Move(movementDirection * -playerSpeed * Time.deltaTime);
+
+
+
+
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "walk")
+        {
+            Walk.Play();
+        }
+    }
+
+    IEnumerator Started()
+    {
+
+        playerSpeed = 0;
+        yield return new WaitForSeconds(33);
+        playerSpeed = 2;
 
     }
 }
