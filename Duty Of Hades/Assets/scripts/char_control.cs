@@ -16,8 +16,15 @@ public class char_control : MonoBehaviour
     private Camera followCamera;
 
     private Animator anim;
+    public Animator fox_walk;
+    public Animator blink;
 
     public AudioSource Walk;
+    public AudioSource fox;
+    public AudioSource fox2;
+    public AudioSource env;
+
+
 
     void Start()
     {
@@ -40,18 +47,12 @@ public class char_control : MonoBehaviour
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
 
+        
         Vector3 movementInput = Quaternion.Euler(0, followCamera.transform.localEulerAngles.y ,0) * -new Vector3(horizontal, 0, vertical);
         Vector3 movementDirection = movementInput.normalized;
 
 
-        if (Input.GetKey(KeyCode.E))
-        {
-            anim.SetBool("feed", true);
-        }
-        else
-        {
-            anim.SetBool("feed", false);
-        }
+        
         
         if (movementDirection != Vector3.zero)
         {
@@ -79,6 +80,15 @@ public class char_control : MonoBehaviour
         {
             Walk.Play();
         }
+        if (other.gameObject.tag == "fox")
+        {
+            fox_walk.SetBool("fox", true);
+            StartCoroutine(Started());
+            fox.Play();
+            fox2.Play();
+            StartCoroutine(Blink());
+
+        }
     }
 
     IEnumerator Started()
@@ -89,4 +99,13 @@ public class char_control : MonoBehaviour
         playerSpeed = 2;
 
     }
+    IEnumerator Blink()
+    {
+        yield return new WaitForSeconds(15);
+        blink.SetBool("blink", true);
+        fox.Stop();
+        env.Stop();
+        
+    }
 }
+
