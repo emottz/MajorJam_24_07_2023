@@ -10,4 +10,4 @@ Credit(Thanks for assets)
 -https://sketchfab.com/3d-models/bear-walk-ffd55e32c04c498681ed11584bdd49a5
 -https://sketchfab.com/tiikeri
 -https://sketchfab.com/3d-models/earth-0caafb7e837047a688a3e504c0ea74af#download
--https://sketchfab.com/3d-models/moon-and-clouds-4c2e8dec9e0248a88936f30989d57254#download
+-https://sketchfab.com/3d-models/galaxy-dbb2f075329747a09cc8add2ad05acad#download
