@@ -10,4 +10,5 @@ Credit(Thanks for assets)
 -https://sketchfab.com/3d-models/bear-walk-ffd55e32c04c498681ed11584bdd49a5
 -https://sketchfab.com/tiikeri
 -https://sketchfab.com/3d-models/earth-0caafb7e837047a688a3e504c0ea74af#download
--https://sketchfab.com/3d-models/galaxy-dbb2f075329747a09cc8add2ad05acad#download
+-https://sketchfab.com/3d-models/black-hole-cfd16738ad2c402b9dc8e38a9c05c8d4
+-https://sketchfab.com/3d-models/dyson-sphere-1fa6397201a0428d89b3d9c078727e5f#download
